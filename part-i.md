@@ -7,7 +7,7 @@ It is important for networking to interact with remote systems.
 Write a Python script to use FTP to download files to a local drive. The
 remote ftp site is [ftp.gnu.org](https://ftp.gnu.org/) and develop an
 efficient manner to find and retrieve all .webm files from the
-[Video](https://ftp.gnu.org/video/) directory.
+[https://ftp.gnu.org/video/](https://ftp.gnu.org/video/) directory.
 
 **Exercise – SSH with Cloud Services:**
 
@@ -34,26 +34,3 @@ For additional information, please refer to:
 
 - [Connect to your Lightsail Linux instance using
     SFTP](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-connecting-to-linux-unix-instance-using-sftp.html)
-
-Upload a recording demonstrating the SSH connectivity and file transfer.
-
-**Due:**
-
-See course shell.
-
-***Submission***
-
-1. You must use only the libraries that are available in the standard
-    Python distribution (unless specified by the instructor).
-
-2. Your code file will be named
-    group\_«your_group_number»\_remote_systems.py e.g., group_1\_
-    remote_systems.py.
-
-3. Must be uploaded to course dropbox before the deadline.
-
-4. See schedule for due date.
-
-***Rubrics***
-
-See requirements above.
