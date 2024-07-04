@@ -44,10 +44,6 @@ See sample code in the subsequent pages.
 
 ![](media/image3.png)
 
-## Due
-
-See the course calendar.
-
 ## Requirements
 
 1. Create a **class** that does the following:
@@ -79,18 +75,6 @@ code.
 1. You must use only the libraries that are available in the standard
     Python distribution.
 
-2. Your code file will be named
-    group\_«your_group_number»\_data_generator.py e.g.
-    group_1\_data_generator.py.
-
-3. Must be uploaded to course dropbox before the deadline.
-
-4. See schedule for due date.
-
-***Rubrics***
-
-See requirements above.
-
 ## Sample Code
 
 The following examples illustrate the various possibilities for
@@ -107,21 +91,19 @@ import matplotlib.pyplot as plt
 
 
 def generator_1() -> int:
-    '''
-    This is the greatest generator. 
+    """
+    This is the greatest generator.
     It returns Narendra's favourite number
-    '''
+    """
     return 10
 
 
 number_of_values = 200
 y = [generator_1() for _ in range(number_of_values)]
 x = [generator_1() for _ in range(number_of_values)]
-plt.plot(x, y, 'r+')
+plt.plot(x, y, "r+")
 plt.show()
 ```
-
-![](media/image4.png)
 
 #### Uniform Values
 
@@ -136,19 +118,17 @@ import matplotlib.pyplot as plt
 import random
 
 
-
-
 def generator_2() -> int:
-    '''
+    """
     This generator gives you a uniform random number in a 0 to 20
-    '''
+    """
     return random.randint(0, 20)
 
 
 number_of_values = 200
 y = [generator_2() for _ in range(number_of_values)]
 x = [generator_2() for _ in range(number_of_values)]
-plt.plot(x, y, 'r+')
+plt.plot(x, y, "r+")
 plt.show()
 ```
 
@@ -175,11 +155,9 @@ def generator_3() -> int:
 number_of_values = 200
 y = [generator_3() for _ in range(number_of_values)]
 x = [generator_3() for _ in range(number_of_values)]
-plt.plot(x, y, 'r.')
+plt.plot(x, y, "r.")
 plt.show()
 ```
-
-![](media/image6.png)
 
 If you increase the number of points, you will see there is a cluster at
 the centre of the grid.
@@ -195,25 +173,20 @@ This is different because the number of students in the line quickly
 builds up to a maximum when the bus has arrived and a minimum when there
 is no bus.
 
-value = {\'base\':10, \'delta\': 0.15}
+```python
+value = {"base": 10, "delta": 0.15}
 
-def generator_4(increment = True) -\> float:
 
-if increment:
+def generator_4(increment=True) -> float:
+    if increment:
+        value["base"] += value["delta"]
+    else:
+        value["base"] -= value["delta"]
+    return value["base"]
 
-value\[\'base\'\] += value\[\'delta\'\]
-
-else:
-
-value\[\'base\'\] -= value\[\'delta\'\]
-
-return value\[\'base\'\]
 
 number_of_values = 200
-
-y = \[generator_4((x % 50) \> 24) for x in range(number_of_values)\]
-
-plt.plot(y, \'g\')
-
+y = [generator_4((x % 50) > 24) for x in range(number_of_values)]
+plt.plot(y, "g")
 plt.show()
-
+```
