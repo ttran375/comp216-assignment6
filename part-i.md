@@ -5,9 +5,9 @@ It is important for networking to interact with remote systems.
 ## Exercise – Download files via FTP
 
 Write a Python script to use FTP to download files to a local drive. The
-remote ftp site is [ftp.gnu.org](ftp://ftp.gnu.org) and develop an
+remote ftp site is [ftp.gnu.org](https://ftp.gnu.org/) and develop an
 efficient manner to find and retrieve all .webm files from the
-[Video](ftp://ftp.gnu.org/video/) directory.
+[Video](https://ftp.gnu.org/video/) directory.
 
 **Exercise – SSH with Cloud Services:**
 
