@@ -102,29 +102,24 @@ notebook](https://colab.research.google.com/drive/1QsxHRlUVITd-aQ0CMf_ubVw7qIdzX
 The first example gives you a constant value regardless of how many
 times you call it.
 
+```python
 import matplotlib.pyplot as plt
 
-def generator_1() -\> int:
 
-\'\'\'
+def generator_1() -> int:
+    '''
+    This is the greatest generator. 
+    It returns Narendra's favourite number
+    '''
+    return 10
 
-This is the greatest generator.
-
-It returns Narendra\'s favourite number
-
-\'\'\'
-
-return 10
 
 number_of_values = 200
-
-y = \[generator_1() for \_ in range(number_of_values)\]
-
-x = \[generator_1() for \_ in range(number_of_values)\]
-
-plt.plot(x, y, \'r+\')
-
+y = [generator_1() for _ in range(number_of_values)]
+x = [generator_1() for _ in range(number_of_values)]
+plt.plot(x, y, 'r+')
 plt.show()
+```
 
 ![](media/image4.png)
 
@@ -136,31 +131,26 @@ interval \[a, b\]. Uniform distributed values occur frequently in
 everyday situations such as the odds of getting a particular value on
 the toss of an un-biased die.
 
+```python
 import matplotlib.pyplot as plt
-
 import random
 
-def generator_2() -\> int:
 
-\'\'\'
 
-This generator gives you a uniform random number in a 0 to 20
 
-\'\'\'
+def generator_2() -> int:
+    '''
+    This generator gives you a uniform random number in a 0 to 20
+    '''
+    return random.randint(0, 20)
 
-return random.randint(0, 20)
 
 number_of_values = 200
-
-y = \[generator_2() for \_ in range(number_of_values)\]
-
-x = \[generator_2() for \_ in range(number_of_values)\]
-
-plt.plot(x, y, \'r+\')
-
+y = [generator_2() for _ in range(number_of_values)]
+x = [generator_2() for _ in range(number_of_values)]
+plt.plot(x, y, 'r+')
 plt.show()
-
-![](media/image5.png)
+```
 
 #### Standard Values
 
@@ -173,23 +163,21 @@ different because the number of students in the line quickly builds up
 to a maximum when the bus has arrived and a minimum when there is no
 bus.
 
+```python
 import matplotlib.pyplot as plt
-
 import random
 
-def generator_3() -\> int:
 
-return random.gauss(10, 1.0)
+def generator_3() -> int:
+    return random.gauss(10, 1.0)
+
 
 number_of_values = 200
-
-y = \[generator_3() for \_ in range(number_of_values)\]
-
-x = \[generator_3() for \_ in range(number_of_values)\]
-
-plt.plot(x, y, \'r.\')
-
+y = [generator_3() for _ in range(number_of_values)]
+x = [generator_3() for _ in range(number_of_values)]
+plt.plot(x, y, 'r.')
 plt.show()
+```
 
 ![](media/image6.png)
 
@@ -229,4 +217,3 @@ plt.plot(y, \'g\')
 
 plt.show()
 
-![](media/image7.png)
