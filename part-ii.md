@@ -105,6 +105,8 @@ plt.plot(x, y, "r+")
 plt.show()
 ```
 
+![png](sample_code_files/sample_code_2_0.png)
+
 #### Uniform Values
 
 The second example gives you a uniformly random value. It uses the
@@ -132,6 +134,8 @@ plt.plot(x, y, "r+")
 plt.show()
 ```
 
+![png](sample_code_files/sample_code_4_0.png)
+
 #### Standard Values
 
 The third example gives you a normal random value. It uses the gauss()
@@ -158,6 +162,8 @@ x = [generator_3() for _ in range(number_of_values)]
 plt.plot(x, y, "r.")
 plt.show()
 ```
+
+![png](sample_code_files/sample_code_6_0.png)
 
 If you increase the number of points, you will see there is a cluster at
 the centre of the grid.
@@ -189,4 +195,7 @@ number_of_values = 200
 y = [generator_4((x % 50) > 24) for x in range(number_of_values)]
 plt.plot(y, "g")
 plt.show()
+
 ```
+
+![png](sample_code_files/sample_code_9_0.png)
