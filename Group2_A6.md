@@ -1,4 +1,4 @@
-# Lab 6
+# Part I
 
 ## Introduction
 
@@ -85,3 +85,47 @@ print(sftp_client.listdir('comp216'))
 sftp_client.close()
 client.close()
 ```
+
+# Part II
+
+```python
+import numpy as np
+import random
+import matplotlib.pyplot as plt
+
+
+class DataGenerator:
+    
+    def __init__(self, num_value):
+        self.num_value = num_value
+        self.value = {'base':10, 'delta': 0.15}
+        
+    def __generateDataPoints(self):
+        return np.random.random(self.num_value)
+
+    
+    def getTemperatureSensorDataset(self, min, max):
+        x = self.__generateDataPoints()
+        m = max - min
+        c = min
+        y = m * x + c
+        # return index and y value
+        return y
+        
+    
+
+
+    
+generator = DataGenerator(500)
+
+
+# tempature graph
+y = generator.getTemperatureSensorDataset(18, 21)
+plt.plot(y)
+plt.title("Temperature")
+plt.xlabel('index')
+plt.ylabel('Temperature(℃)')
+plt.show()
+```
+
+![png](media/notebook_files/notebook_0_0.png)
