@@ -4,5 +4,11 @@
     "gitdoc.autoCommitDelay": 60000,
     "gitdoc.autoPushDelay": 0,
     "gitdoc.commitMessageFormat": "ccc, LLL d, kkkk, h:mm a ZZ",
+    "flake8.args": [
+        "--max-line-length=150"
+    ],
+    "mypy-type-checker.args": [
+        "var-annotated"
+    ],
     "files.insertFinalNewline": true
 }
